@@ -17,17 +17,17 @@
             </div>
             <div class="w-full mx-2 md:mx-4">
                 <h4 class="text-xl font-semibold">
-                    <a href="#" class="hover:underline">The title goes here</a>
+                    <a href="#" class="hover:underline">{{ $idea->title }}</a>
                 </h4>
                 <div class="text-gray-600 mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero a odit voluptatibus rem adipisci enim veniam. Quam quas sint eaque nemo quasi deserunt, nobis et minus autem esse libero!
+                    {{ $idea->description }}
                 </div>
 
                 <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">
                     <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
-                        <div class="hidden md:block font-bold text-gray-900">Jane Doe</div>
+                        <div class="hidden md:block font-bold text-gray-900">{{ $idea->user->name }}</div>
                         <div class="hidden md:block">&bull;</div>
-                        <div>10 hours ago</div>
+                        <div>{{ $idea->created_at->diffForHumans() }}</div>
                         <div>&bull;</div>
                         <div>Category 1</div>
                         <div>&bull;</div>
