@@ -17,7 +17,7 @@ class IdeaFactory extends Factory
         return [
             'user_id' => User::factory(),
             'title' => ucwords($this->faker->words(4, true)),
-            'slug' => $this->faker->slug(),
+            // 'slug' => $this->faker->slug(),
             'description' => $this->faker->paragraph(5),
         ];
     }
